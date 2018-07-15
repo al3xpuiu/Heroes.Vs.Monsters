@@ -6,12 +6,14 @@ import com.company.heroes.Fighters;
 
 public class Main {
 
+
     private static boolean isFirstRound = true;
     private static int rounds = 1;
 
     public static void main(String[] args)  {
+
         try {
-            fight( FighterFactory.getFigher( Fighters.ORDERUS ), FighterFactory.getFigher( Fighters.FOREST_MONSTER ) );
+            fight( FighterFactory.getFigher( Fighters.THE_KNIGHT ), FighterFactory.getFigher( Fighters.THE_LONG_CLAWS ) );
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
