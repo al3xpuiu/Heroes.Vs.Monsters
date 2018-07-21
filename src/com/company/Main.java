@@ -105,24 +105,23 @@ public class Main {
                 + f1.getLuckRange().getMin() + f1.getSpeedRange().getMin();
         int f1CurrentAttributesValue = f1.getDefence() + f1.getSpeed() + f1.getLuck() + f1.getStrength() + f1.getHealth();
 
-        if (fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) <= 0.5 &&
-                fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) > 0.3) {
+        double fightCapacity = fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue );
+        if (fightCapacity <= 0.5 && fightCapacity > 0.3) {
             System.out.println(f1 + " is a below average fighter. It has " + f1.getHealth() + " health, " + f1.getStrength() + " strength, " +
                     f1.getLuck() + " luck and " + f1.getDefence() + " defence");
         }
 
-        if (fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) <= 0.3 ) {
+        if (fightCapacity <= 0.3 ) {
             System.out.println(f1 + " is a pretty bad fighter. It has " + f1.getHealth() + " health, " + f1.getStrength() + " strength, " +
                     f1.getLuck() + " luck and " + f1.getDefence() + " defence");
         }
 
-        if (fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) > 0.5 &&
-                fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) <= 0.7) {
+        if (fightCapacity > 0.5 && fightCapacity <= 0.7) {
             System.out.println(f1 + " is a above average fighter. It has " + f1.getHealth() + " health, " + f1.getStrength() + " strength, " +
                     f1.getLuck() + " luck and " + f1.getDefence() + " defence");
         }
 
-        if (fightCapacity( f1CurrentAttributesValue, f1MaxAttributesValue, f1MinAttributesValue ) > 0.7 ) {
+        if (fightCapacity > 0.7 ) {
             System.out.println(f1 + " is a really good fighter. It has " + f1.getHealth() + " health, " + f1.getStrength() + " strength, " +
                     f1.getLuck() + " luck and " + f1.getDefence() + " defence");
         }
